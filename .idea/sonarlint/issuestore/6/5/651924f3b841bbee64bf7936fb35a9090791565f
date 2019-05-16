@@ -1,0 +1,8 @@
+
+V
+squid:S106*"9Replace this use of System.out or System.err by a logger.(à‡¢8³á§î«-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ÿãóµ8Óâøï«-
+isquid:S1192"FDefine a constant instead of duplicating this literal "Black" 4 times.(•¾¸øÿÿÿÿ8Ï•ğ«-
+Œsquid:S1192"nDefine a constant instead of duplicating this literal "You can take down opponent Piece on position " 4 times.(·Œ”Ş8Óâøï«-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8úñî«-
+xsquid:S1192"ZDefine a constant instead of duplicating this literal "You can move to position " 4 times.(šİÑ8Ş¤¤î«-

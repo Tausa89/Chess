@@ -1,0 +1,6 @@
+
+^squid:S1854"ARemove this useless assignment to local variable "nextPositionX".(“á¯E8‹©€•¬-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÔƒÖ”¬-
+Osquid:S1481"2Remove this unused "nextPositionX" local variable.(“á¯E8‹©€•¬-
+^squid:S1854"ARemove this useless assignment to local variable "nextPositionY".(‰Ïð;8‹©€•¬-
+Osquid:S1481"2Remove this unused "nextPositionY" local variable.(‰Ïð;8‹©€•¬-
