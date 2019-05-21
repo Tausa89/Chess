@@ -10,18 +10,22 @@ public class Queen extends Piece {
     }
 
     @Override
-    public List move(Piece[][] board, int x, int y) {
+    public List<MovePoint> possibleMoves(Piece[][] board, int x, int y) {
 
         int nextPositionX = x - 1;
         int nextPositionY = y - 1;
 
         while (nextPositionX >= 0 && nextPositionY >= 0) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            } else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+                possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
 
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
             }
+//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//
+//            }
             nextPositionX--;
             nextPositionY--;
         }
@@ -32,11 +36,16 @@ public class Queen extends Piece {
 
         while (nextPositionX >= 0 && nextPositionY < 8) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            }  else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
             }
+//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//
+//            }
             nextPositionX--;
             nextPositionY++;
         }
@@ -44,13 +53,18 @@ public class Queen extends Piece {
         nextPositionX = x + 1;
         nextPositionY = y + 1;
 
-        while (nextPositionX < 8  && nextPositionY < 8) {
+        while (nextPositionX < 8 && nextPositionY < 8) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            } else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
             }
+//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//
+//            }
             nextPositionX++;
             nextPositionY++;
         }
@@ -60,63 +74,86 @@ public class Queen extends Piece {
 
         while (nextPositionX < 8 && nextPositionY >= 0) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            } else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
             }
+//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//
+//            }
             nextPositionX++;
             nextPositionY--;
         }
 
         int nextPosition = x - 1;
 
-        while(nextPosition >= 0){
-            if(board[nextPosition][y] == null){
-                possibleMoves.add("You can move to position " + nextPosition + " " + y);
-            }
-            else if(board[nextPosition][y] != null && board[nextPosition][y].getPieceColor().equals("Black")){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPosition + " " + y);
+        while (nextPosition >= 0) {
+            if (board[nextPosition][y] == null) {
+                if (!possibleMoves.contains(new MovePoint(nextPosition, y))) {
+                    possibleMoves.add(new MovePoint(nextPosition, y));
+                }
+            } else if (board[nextPosition][y] != null && board[nextPosition][y].getPieceColor().equals(board[x][y].getPieceColor())) {
                 break;
             }
+//            else if(board[nextPosition][y] != null && board[nextPosition][y].getPieceColor().equals("Black")){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPosition + " " + y);
+//                break;
+//            }
             nextPosition--;
         }
-        nextPosition = x +1;
-        while(nextPosition < 8){
-            if(board[nextPosition][y] == null){
-                possibleMoves.add("You can move to position " + nextPosition + " " + y);
-            }
-            else if(board[nextPosition][y] != null && board[nextPosition][y].getPieceColor().equals("Black")){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPosition + " " + y);
+        nextPosition = x + 1;
+        while (nextPosition < 8) {
+            if (board[nextPosition][y] == null) {
+                if(!possibleMoves.contains(new MovePoint(nextPosition, y))) {
+                    possibleMoves.add(new MovePoint(nextPosition, y));
+                }
+
+            } else if (board[nextPosition][y] != null && board[nextPosition][y].getPieceColor().equals(board[x][y].getPieceColor())) {
                 break;
             }
+//            else if(board[nextPosition][y] != null && board[nextPosition][y].getPieceColor().equals("Black")){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPosition + " " + y);
+//                break;
+//            }
             nextPosition++;
         }
         nextPosition = y - 1;
-        while(nextPosition >= 0){
-            if(board[x][nextPosition] == null){
-                possibleMoves.add("You can move to position " + x + " " + nextPosition);
-            }
-            else if(board[x][nextPosition] != null && board[x][nextPosition].getPieceColor().equals("Black")){
-                possibleMoves.add("You can take down opponent Piece on position " + x + " " + nextPosition);
+        while (nextPosition >= 0) {
+            if (board[x][nextPosition] == null) {
+                if(!possibleMoves.contains(new MovePoint(x, nextPosition))) {
+                    possibleMoves.add(new MovePoint(x, nextPosition));
+                }
+            } else if (board[x][nextPosition] != null && board[x][nextPosition].getPieceColor().equals(board[x][y].getPieceColor())) {
                 break;
             }
+//            else if(board[x][nextPosition] != null && board[x][nextPosition].getPieceColor().equals("Black")){
+//                possibleMoves.add("You can take down opponent Piece on position " + x + " " + nextPosition);
+//                break;
+//            }
             nextPosition--;
         }
 
         nextPosition = y + 1;
-        while(nextPosition < 8){
-            if(board[x][nextPosition] == null){
-                possibleMoves.add("You can move to position " + x + " " + nextPosition);
-            }
-            else if(board[x][nextPosition] != null && board[x][nextPosition].getPieceColor().equals("Black")){
-                possibleMoves.add("You can take down opponent Piece on position " + x + " " + nextPosition);
+        while (nextPosition < 8) {
+            if (board[x][nextPosition] == null) {
+                if(!possibleMoves.contains(new MovePoint(x, nextPosition))) {
+                    possibleMoves.add(new MovePoint(x, nextPosition));
+                }
+
+            } else if (board[x][nextPosition] != null && board[x][nextPosition].getPieceColor().equals(board[x][y].getPieceColor())) {
                 break;
             }
+//            else if(board[x][nextPosition] != null && board[x][nextPosition].getPieceColor().equals("Black")){
+//                possibleMoves.add("You can take down opponent Piece on position " + x + " " + nextPosition);
+//                break;
+//            }
             nextPosition++;
         }
 
-        for(String moves : possibleMoves){
+        for (MovePoint moves : possibleMoves) {
             System.out.println(moves);
         }
 

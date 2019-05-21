@@ -1,3 +1,17 @@
 
-“squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(•†ñ¢ıÿÿÿÿ8­üğËª-
-Isquid:S1168"+Return an empty collection instead of null.(¥¹ï8­üğËª-
+isquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(ãÄº´8ËÄò¹­-
+jsquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(Æï’«8æŠø¹­-
+nsquid:CommentedOutCodeLineC"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8µ²ğ¹­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ŸŞí¹­-
+jsquid:CommentedOutCodeLine„"<This block of commented-out lines of code should be removed.(Æï’«8Ö”÷¹­-
+nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ÉÊï¹­-
+nsquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(¤öøõıÿÿÿÿ8ÉÊï¹­-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ó¿’–¬-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 66 to the 15 allowed.(ñáİ¦8†ä”–¬-
+nsquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8Îÿñ¹­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤öøõıÿÿÿÿ8ŸŞí¹­-
+nsquid:CommentedOutCodeLine@"<This block of commented-out lines of code should be removed.(¤öøõıÿÿÿÿ8µ²ğ¹­-
+nsquid:CommentedOutCodeLineS"<This block of commented-out lines of code should be removed.(¤öøõıÿÿÿÿ8Îÿñ¹­-
+isquid:CommentedOutCodeLineu"<This block of commented-out lines of code should be removed.(ãÄº´8çö¹­-
+W
+squid:S106"9Replace this use of System.out or System.err by a logger.(à‡¢8èä•–¬-

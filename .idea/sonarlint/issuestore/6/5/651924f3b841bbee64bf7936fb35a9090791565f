@@ -1,8 +1,9 @@
 
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(òóÕÿÿÿÿÿ8‹Â®¹­-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ñáÝ¦8î—½­-
+isquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(Õåµ¤8åø®¹­-
+isquid:CommentedOutCodeLine("<This block of commented-out lines of code should be removed.(çÛ´¤8ö¨¯¹­-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‚Ø¤¬8•¡®¹­-
 V
-squid:S106*"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8³á§î«-
-psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ÿãóµ8Óâøï«-
-isquid:S1192"FDefine a constant instead of duplicating this literal "Black" 4 times.(•¾¸øÿÿÿÿ8Ï•ð«-
-Œsquid:S1192"nDefine a constant instead of duplicating this literal "You can take down opponent Piece on position " 4 times.(·Œ”Þ8Óâøï«-
+squid:S106:"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8©Ù­¹­-
 [squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8úñžî«-
-xsquid:S1192"ZDefine a constant instead of duplicating this literal "You can move to position " 4 times.(šÝÑ8Þ¤¤î«-

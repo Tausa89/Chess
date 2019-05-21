@@ -1,12 +1,14 @@
 
-Rsquid:S1066("/Merge this if statement with the enclosing one.(Ì‰ üÿÿÿÿÿ8×­µõª-
-usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(î‡»Èıÿÿÿÿ8×­µõª-
+Msquid:S1066$"/Merge this if statement with the enclosing one.(â²ËÛ8ÂÑ¤¹­-
 [
-squid:S106N"9Replace this use of System.out or System.err by a logger.(˜ä— øÿÿÿÿ8³Ëíòª-
-Msquid:S1066D"/Merge this if statement with the enclosing one.(äÅ‘8Úâ¨õª-
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8å“Ä«-
-isquid:S1192("FDefine a constant instead of duplicating this literal "Black" 6 times.(Ì‰ üÿÿÿÿÿ8ğ©´õª-
+squid:S106K"9Replace this use of System.out or System.err by a logger.(˜ä— øÿÿÿÿ8³Ëíòª-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8£¹­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8‚„£¹­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8‰»£¹­-
+nsquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ŸÖæúÿÿÿÿ8ÂÑ¤¹­-
 V
 squid:S1064"9Replace this use of System.out or System.err by a logger.(à‡¢8³Ëíòª-
-‘squid:S1192)"nDefine a constant instead of duplicating this literal "You can take down opponent Piece on position " 5 times.(Ïº€åúÿÿÿÿ8ğ©´õª-
-Rsquid:S1066-"/Merge this if statement with the enclosing one.(ÉªÇüşÿÿÿÿ8×­µõª-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8å“Ä«-
+hsquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(Ê‘Ç,8ÿ©¥¹­-
+nsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(¤ßÊÛûÿÿÿÿ8ÿ©¥¹­-
+isquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(İî¡È8ÿ©¥¹­-

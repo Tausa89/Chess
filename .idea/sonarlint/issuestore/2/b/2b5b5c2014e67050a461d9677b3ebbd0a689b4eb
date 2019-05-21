@@ -1,16 +1,24 @@
 
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ñ³¨Ìª-
-V
-squid:S106["9Replace this use of System.out or System.err by a logger.(×¾ÉÇ8¤íÎÇª-
-isquid:S1192 "FDefine a constant instead of duplicating this literal "Black" 9 times.(ÕØâ©úÿÿÿÿ8‘°²Æ«-
-Ÿsquid:S1186
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥·8¾ÊÂÌª-
-U
-squid:S106T"9Replace this use of System.out or System.err by a logger.(°•Ş8¤íÎÇª-
-esquid:S1192"GDefine a constant instead of duplicating this literal "White" 26 times.(ÿ¾«¦8¶•®Æ«-
-V
-squid:S106W"9Replace this use of System.out or System.err by a logger.(×•œ²8¤íÎÇª-
-Ÿsquid:S1186t"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ğ´î8Œ¶îğª-
-[
-squid:S106Y"9Replace this use of System.out or System.err by a logger.(å‡ëÇøÿÿÿÿ8¤íÎÇª-
+\
+squid:S106”"9Replace this use of System.out or System.err by a logger.(é‰ê•úÿÿÿÿ8çÊ¼»­-
+nsquid:CommentedOutCodeLinex"<This block of commented-out lines of code should be removed.(Ğüü¯şÿÿÿÿ8áü…¼­-
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(µãËÿşÿÿÿÿ8«Ñ»­-
 7squid:S1700"Rename field "chessBoard"(‚ïË8û¥êó©-
+osquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8»Ê¨»­-
+[
+squid:S106^"9Replace this use of System.out or System.err by a logger.(å‡ëÇøÿÿÿÿ8¤íÎÇª-
+jsquid:S1192#"GDefine a constant instead of duplicating this literal "Black" 16 times.(ÕØâ©úÿÿÿÿ8¬éÉ•¬-
+isquid:CommentedOutCodeLineg"<This block of commented-out lines of code should be removed.(¾˜ÿø8šº†¼­-
+jsquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(Üîæİ8»Ê¨»­-
+V
+squid:S106\"9Replace this use of System.out or System.err by a logger.(×•œ²8¤íÎÇª-
+V
+squid:S106`"9Replace this use of System.out or System.err by a logger.(×¾ÉÇ8¤íÎÇª-
+osquid:CommentedOutCodeLine›"<This block of commented-out lines of code should be removed.(ÄàĞûÿÿÿÿ8»Ê¨»­-
+esquid:S1192"GDefine a constant instead of duplicating this literal "White" 17 times.(ÿ¾«¦8¶•®Æ«-
+hsquid:CommentedOutCodeLiner"<This block of commented-out lines of code should be removed.(½ÜĞ8áü…¼­-
+U
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(°•Ş8¤íÎÇª-
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•®µû8»Ê¨»­-
+nsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(˜êªŸıÿÿÿÿ8ñ×‰¼­-

@@ -1,6 +1,6 @@
 package sample;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ChessBoard {
 
@@ -8,7 +8,10 @@ public class ChessBoard {
 
 
     public ChessBoard() {
+
+        this.chessBoard = new Piece[8][8];
     }
+
 
 
     public void startingBoard(){
@@ -37,14 +40,14 @@ public class ChessBoard {
         Piece pwant6B = new Pawn("Black",'P');
         Piece pwant7B = new Pawn("Black",'P');
         Piece pwant8B = new Pawn("Black",'P');
-        Piece rook1B = new Rook("White",'R');
-        Piece rook2B = new Rook("White",'R');
-        Piece knight1B = new Knight("White",'k');
-        Piece knight2B = new Knight("White",'k');
-        Piece bishop1B = new Bishop("White",'B');
-        Piece bishop2B = new Bishop("White",'B');
-        Piece queenB = new Queen("White", 'Q');
-        Piece kingB = new King("White", 'K');
+        Piece rook1B = new Rook("Black",'R');
+        Piece rook2B = new Rook("Black",'R');
+        Piece knight1B = new Knight("Black",'k');
+        Piece knight2B = new Knight("Black",'k');
+        Piece bishop1B = new Bishop("Black",'B');
+        Piece bishop2B = new Bishop("Black",'B');
+        Piece queenB = new Queen("Black", 'Q');
+        Piece kingB = new King("Black", 'K');
 
         Piece[][] board = {
                 {rook1B,knight1B,bishop1B,queenB,kingB,bishop2B,knight2B,rook2B},
@@ -64,13 +67,15 @@ public class ChessBoard {
         return chessBoard;
     }
 
-    public void addKnight(int x, int y, String color){
-        this.chessBoard[x][y] = new Knight(color,'k');
+    public void addBishop(int x, int y, String color){
+        this.chessBoard[x][y] = new Bishop(color, 'B') {
+        };
     }
 
     public void removePiece(int x, int y){
         this.chessBoard[x][y] = null;
     }
+
 
     public void move(){
         if (this.chessBoard[4][0]==null){
@@ -94,16 +99,36 @@ public class ChessBoard {
     }
 
     public static void main(String[] args) {
+
+//        Scanner input = new Scanner(System.in);
+
         ChessBoard board = new ChessBoard();
         board.startingBoard();
 
-        board.addKnight(4,4,"White");
-        board.addKnight(3,2,"White");
-        board.addKnight(5,2,"Black");
+        board.removePiece(7,5);
+        board.addBishop(4,1,"White");
 
 
-        board.get(4,4).move(board.getChessBoard(),4,4);
+
+
+
+
+//        board.addQueen(4,0,"White");
+
+//        int number = input.nextInt();
+//        int number1 = input.nextInt();
+//        int number2 = input.nextInt();
+//        int number3 = input.nextInt();
 //
+//
+//        board.movePiece(number,number1,number2,number3);
+        board.get(6,1).possibleMoves(board.getChessBoard(),6,1);
+
+
+
+
+
+
 
 
 
@@ -114,9 +139,44 @@ public class ChessBoard {
         return this.chessBoard[x][y];
     }
 
-    public void getCords(ChessBoard [][]boards){
+    public boolean movePiece(int currentPositionX,int currentPositionY, int newPositionX, int newPositionY){
+
+        this.chessBoard[currentPositionX][currentPositionY].possibleMoves(this.getChessBoard(),currentPositionX,currentPositionY);
+        if(this.chessBoard[currentPositionX][currentPositionY].possibleMoves.contains(new MovePoint(newPositionX,newPositionY))){
+            Piece pieceToMove = get(currentPositionX,currentPositionY);
+            this.chessBoard[newPositionX][newPositionY] = pieceToMove;
+            removePiece(currentPositionX,currentPositionY);
+
+            System.out.println("You moved " + this.chessBoard[newPositionX][newPositionY].getType() + " from position "
+            + currentPositionX + " " + currentPositionY + " to position " + newPositionX + " " + newPositionY);
+
+            return true;
+        }else {
+            System.out.println("Move wasn't able");
+            return false;
+        }
 
     }
+
+
+//    public boolean movePiece(int currentPositionX, int currentPositionY, int newPositionX, int newPositionY){
+//
+//        this.chessBoard[currentPositionX][currentPositionY].possibleMoves(this.getChessBoard(),currentPositionX,currentPositionY);
+//        if(this.chessBoard[currentPositionX][currentPositionY] != null && this.chessBoard[newPositionX][newPositionY] == null){
+//            Piece pieceToMove = get(currentPositionX,currentPositionY);
+//            this.chessBoard[newPositionX][newPositionY] = pieceToMove;
+//            removePiece(currentPositionX,currentPositionY);
+//            System.out.println("New position is " + newPositionX + " " + newPositionY);
+//            System.out.println(this.chessBoard[newPositionX][newPositionY].getType());
+//
+//            return true;
+//        }else {
+//            System.out.println("Move wasn't able");
+//            return false;
+//        }
+//
+//
+//    }
 
 
 }

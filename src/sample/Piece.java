@@ -7,7 +7,7 @@ public abstract class Piece {
 
     private String pieceColor;
     private char type;
-    protected List<String> possibleMoves = new ArrayList<>();
+    protected List<MovePoint> possibleMoves = new ArrayList<>();
 
     public Piece(String pieceColor , char type) {
         this.pieceColor = pieceColor;
@@ -16,7 +16,7 @@ public abstract class Piece {
     }
 
 
-    public abstract List<String> move(Piece[][] board, int x , int y);
+    public abstract List<MovePoint> possibleMoves(Piece[][] board, int x , int y);
 
 
 
@@ -31,5 +31,9 @@ public abstract class Piece {
 
     public char getType() {
         return type;
+    }
+
+    public List<MovePoint> getPossibleMoves() {
+        return possibleMoves;
     }
 }

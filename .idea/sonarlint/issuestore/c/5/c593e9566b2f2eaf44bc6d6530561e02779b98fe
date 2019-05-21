@@ -1,6 +1,11 @@
 
-^squid:S1854"ARemove this useless assignment to local variable "nextPositionX".(“á¯E8‹©€•¬-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤öøõýÿÿÿÿ8¦µÉ¹­-
+nsquid:CommentedOutCodeLineG"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8§™Ï¹­-
 [squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÔƒÖ”¬-
-Osquid:S1481"2Remove this unused "nextPositionX" local variable.(“á¯E8‹©€•¬-
-^squid:S1854"ARemove this useless assignment to local variable "nextPositionY".(‰Ïð;8‹©€•¬-
-Osquid:S1481"2Remove this unused "nextPositionY" local variable.(‰Ïð;8‹©€•¬-
+nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(¤öøõýÿÿÿÿ8þÚÍ¹­-
+V
+squid:S106M"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8¢¡Ò•¬-
+nsquid:CommentedOutCodeLineD"<This block of commented-out lines of code should be removed.(¤öøõýÿÿÿÿ8§™Ï¹­-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ñáÝ¦8¹ïª•¬-
+nsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(¤öøõýÿÿÿÿ8ÂíÊ¹­-
+nsquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8þÚÍ¹­-

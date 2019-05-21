@@ -10,18 +10,23 @@ public class Bishop extends Piece {
     }
 
     @Override
-    public List move(Piece[][] board, int x, int y) {
+    public List<MovePoint> possibleMoves(Piece[][] board, int x, int y) {
 
         int nextPositionX = x - 1;
         int nextPositionY = y - 1;
 
         while (nextPositionX >= 0 && nextPositionY >= 0) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            } else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
             }
+            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
+            }
+//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//            }
             nextPositionX--;
             nextPositionY--;
         }
@@ -32,11 +37,16 @@ public class Bishop extends Piece {
 
         while (nextPositionX >= 0 && nextPositionY < 8) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            }  else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
             }
+            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
+            }
+//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//            }
             nextPositionX--;
             nextPositionY++;
         }
@@ -44,13 +54,19 @@ public class Bishop extends Piece {
         nextPositionX = x + 1;
         nextPositionY = y + 1;
 
-        while (nextPositionX < 8  && nextPositionY < 8) {
+        while (nextPositionX < 8 && nextPositionY < 8) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            } else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
             }
+            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
+            }
+//              else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//
+//              }
             nextPositionX++;
             nextPositionY++;
         }
@@ -60,16 +76,23 @@ public class Bishop extends Piece {
 
         while (nextPositionX < 8 && nextPositionY >= 0) {
             if (board[nextPositionX][nextPositionY] == null) {
-                possibleMoves.add("You can move to " + nextPositionX + " " + nextPositionY);
-            } else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
 
             }
+            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
+            }
+//                else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
+//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
+//
+//                }
             nextPositionX++;
             nextPositionY--;
         }
 
-        for(String moves : possibleMoves){
+        for (MovePoint moves : possibleMoves) {
             System.out.println(moves);
         }
 
