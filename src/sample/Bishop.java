@@ -15,89 +15,105 @@ public class Bishop extends Piece {
         int nextPositionX = x - 1;
         int nextPositionY = y - 1;
 
-        while (nextPositionX >= 0 && nextPositionY >= 0) {
-            if (board[nextPositionX][nextPositionY] == null) {
-                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
-                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
-                }
-            }
-            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
-                break;
-            }
-//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-//            }
-            nextPositionX--;
-            nextPositionY--;
-        }
+        checkingDirectionMinusMinus(board, x, y, nextPositionX, nextPositionY);
 
         nextPositionX = x - 1;
         nextPositionY = y + 1;
 
 
-        while (nextPositionX >= 0 && nextPositionY < 8) {
-            if (board[nextPositionX][nextPositionY] == null) {
-                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
-                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
-                }
-            }
-            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
-                break;
-            }
-//            else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-//            }
-            nextPositionX--;
-            nextPositionY++;
-        }
+        checkingDirectionMinusPlus(board, x, y, nextPositionX, nextPositionY);
 
         nextPositionX = x + 1;
         nextPositionY = y + 1;
 
-        while (nextPositionX < 8 && nextPositionY < 8) {
-            if (board[nextPositionX][nextPositionY] == null) {
-                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
-                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
-                }
-            }
-            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
-                break;
-            }
-//              else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-//
-//              }
-            nextPositionX++;
-            nextPositionY++;
-        }
+        checkingDirectionPlusPlus(board, x, y, nextPositionX, nextPositionY);
 
         nextPositionX = x + 1;
         nextPositionY = y - 1;
 
+        checkingDirectionPlusMinus(board, x, y, nextPositionX, nextPositionY);
+
+        printMoves();
+
+        return possibleMoves;
+
+
+    }
+
+    private void checkingDirectionPlusMinus(Piece[][] board, int x, int y, int nextPositionX, int nextPositionY) {
         while (nextPositionX < 8 && nextPositionY >= 0) {
             if (board[nextPositionX][nextPositionY] == null) {
                 if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
                     possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
                 }
 
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                return;
+            } else {
+                takeDownPossibility(nextPositionX, nextPositionY);
+                return;
             }
-            else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
-                break;
-            }
-//                else if(board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals("Black") ){
-//                possibleMoves.add("You can take down opponent Piece on position " + nextPositionX + " " + nextPositionY);
-//
-//                }
             nextPositionX++;
             nextPositionY--;
         }
+    }
 
-        for (MovePoint moves : possibleMoves) {
-            System.out.println(moves);
+    private void takeDownPossibility(int nextPositionX, int nextPositionY) {
+        if (possibleTakeDowns.contains(new MovePoint(nextPositionX, nextPositionY))) {
+            return;
+        } else
+            possibleTakeDowns.add(new MovePoint(nextPositionX, nextPositionY));
+
+    }
+
+    private void checkingDirectionPlusPlus(Piece[][] board, int x, int y, int nextPositionX, int nextPositionY) {
+        while (nextPositionX < 8 && nextPositionY < 8) {
+            if (board[nextPositionX][nextPositionY] == null) {
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
+            }else {
+                takeDownPossibility(nextPositionX, nextPositionY);
+                return;
+            }
+            nextPositionX++;
+            nextPositionY++;
         }
+    }
 
-        return possibleMoves;
+    private void checkingDirectionMinusPlus(Piece[][] board, int x, int y, int nextPositionX, int nextPositionY) {
+        while (nextPositionX >= 0 && nextPositionY < 8) {
+            if (board[nextPositionX][nextPositionY] == null) {
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
+            }else {
+                takeDownPossibility(nextPositionX, nextPositionY);
+                return;
+            }
+            nextPositionX--;
+            nextPositionY++;
+        }
+    }
 
-
+    private void checkingDirectionMinusMinus(Piece[][] board, int x, int y, int nextPositionX, int nextPositionY) {
+        while (nextPositionX >= 0 && nextPositionY >= 0) {
+            if (board[nextPositionX][nextPositionY] == null) {
+                if (!possibleMoves.contains(new MovePoint(nextPositionX, nextPositionY))) {
+                    possibleMoves.add(new MovePoint(nextPositionX, nextPositionY));
+                }
+            } else if (board[nextPositionX][nextPositionY] != null && board[nextPositionX][nextPositionY].getPieceColor().equals(board[x][y].getPieceColor())) {
+                break;
+            }else {
+                takeDownPossibility(nextPositionX, nextPositionY);
+                return;
+            }
+            nextPositionX--;
+            nextPositionY--;
+        }
     }
 }

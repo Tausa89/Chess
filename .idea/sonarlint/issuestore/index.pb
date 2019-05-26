@@ -27,3 +27,5 @@ B
 src/sample/notatki,9\4\94543b8a7e2ec738ad7d5458bbdaaef9b1771c5a
 I
 src/sample/MovePoint.java,a\6\a6c0e7a45c2c666289dc7f4a86fa7e3452080d21
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

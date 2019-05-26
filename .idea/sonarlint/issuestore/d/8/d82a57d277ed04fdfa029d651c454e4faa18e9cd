@@ -1,9 +1,0 @@
-
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8˜˜Ðí«-
-isquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(Æï’«8èœÅ¹­-
-isquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(ãÄº´8»ÓÂ¹­-
-V
-squid:S106S"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8ÔªÞí«-
-isquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(Æï’«8ªÓÆ¹­-
-psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ñáÝ¦8Ø÷Ðí«-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ãÄº´8¡Í¿¹­-

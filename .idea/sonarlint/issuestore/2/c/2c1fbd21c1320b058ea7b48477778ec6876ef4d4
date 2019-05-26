@@ -1,21 +1,3 @@
 
-nsquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ƒ¼×‘ùÿÿÿÿ8“×Õ¹­-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ê¦°Ë8÷ºÕ¹­-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(»¤œüøÿÿÿÿ8Ó²à¹­-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(àÄ€‹ÿÿÿÿÿ8Ô•Õ¹­-
-isquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(ÔýŽþ8Çõß¹­-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ìýã‘8Šà¹­-
-isquid:CommentedOutCodeLineG"<This block of commented-out lines of code should be removed.(À Ù¾8ôÖÖ¹­-
-V
-squid:S106R"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8Å‰ž—¬-
 [squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ó£Ö”¬-
-hsquid:CommentedOutCodeLine?"<This block of commented-out lines of code should be removed.(þ‹éb8¹·Ö¹­-
-isquid:CommentedOutCodeLineC"<This block of commented-out lines of code should be removed.(êâåÙ8œ…ß¹­-
-nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(£¾ðžúÿÿÿÿ8 óÕ¹­-
-isquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(Ðâ‰æ8ÌçÞ¹­-
-nsquid:CommentedOutCodeLineO"<This block of commented-out lines of code should be removed.(Þý×ÿÿÿÿÿ8æ…×¹­-
-nsquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(©âùÿÿÿÿ8£Îß¹­-
-psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ñáÝ¦8Ÿ‰’—¬-
-isquid:CommentedOutCodeLine;"<This block of commented-out lines of code should be removed.(ø†êÇ8ê™ß¹­-
-isquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(¡ÿÿÊ8…Ö¹­-
-isquid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(…Êù°8ù´ß¹­-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(ñáÝ¦8Ÿ‰’—¬-

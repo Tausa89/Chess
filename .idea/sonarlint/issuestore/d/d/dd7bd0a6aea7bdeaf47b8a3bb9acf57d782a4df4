@@ -1,3 +1,10 @@
 
-wsquid:S2293
-"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤áŠþ8Ã¢Ã‘­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤ÿ›úÿÿÿÿ8£Ç”Ž®-
+U
+squid:S1061"9Replace this use of System.out or System.err by a logger.(‰êøp8îÃè¶®-
+V
+squid:S1063"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8îÃè¶®-
+[
+squid:S1065"9Replace this use of System.out or System.err by a logger.(—ï¿Æûÿÿÿÿ8îÃè¶®-
+V
+squid:S1067"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8îÃè¶®-

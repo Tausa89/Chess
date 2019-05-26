@@ -1,14 +1,9 @@
 
-Msquid:S1066$"/Merge this if statement with the enclosing one.(â²ËÛ8ÂÑ¤¹­-
-[
-squid:S106K"9Replace this use of System.out or System.err by a logger.(˜ä— øÿÿÿÿ8³Ëíòª-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8Žž£¹­-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8‚„£¹­-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8‰»£¹­-
-nsquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ŸÖæúÿÿÿÿ8ÂÑ¤¹­-
-V
-squid:S1064"9Replace this use of System.out or System.err by a logger.(à‡Ž¢8³Ëíòª-
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8å“Ä«-
-hsquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(Ê‘Ç,8ÿ©¥¹­-
-nsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(¤ßÊÛûÿÿÿÿ8ÿ©¥¹­-
-isquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(Ýî¡È8ÿ©¥¹­-
+hsquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(Ê‘Ç,8ÿ©¥¹­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8‰»£¹­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8‚„£¹­-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¹öàÜøÿÿÿÿ8Žž£¹­-
+isquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(Ýî¡È8ÿ©¥¹­-
+nsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(ŸÖæúÿÿÿÿ8ÂÑ¤¹­-
+nsquid:CommentedOutCodeLine>"<This block of commented-out lines of code should be removed.(¤ßÊÛûÿÿÿÿ8ÿ©¥¹­-
+Msquid:S1066""/Merge this if statement with the enclosing one.(â²ËÛ8ÂÑ¤¹­-

@@ -1,7 +1,5 @@
 package sample;
 
-import java.util.Scanner;
-
 public class ChessBoard {
 
     private Piece[][] chessBoard =  new Piece[8][8];
@@ -67,8 +65,8 @@ public class ChessBoard {
         return chessBoard;
     }
 
-    public void addBishop(int x, int y, String color){
-        this.chessBoard[x][y] = new Bishop(color, 'B') {
+    public void addPawn(int x, int y, String color){
+        this.chessBoard[x][y] = new Pawn(color, 'P') {
         };
     }
 
@@ -105,24 +103,14 @@ public class ChessBoard {
         ChessBoard board = new ChessBoard();
         board.startingBoard();
 
-        board.removePiece(7,5);
-        board.addBishop(4,1,"White");
+        board.addPawn(3,2,"Black");
+        board.addPawn(3,4,"White");
+        board.addPawn(4,3,"White");
+        board.get(4,3).possibleMoves(board.getChessBoard(),4,3);
+        board.pieceTakeDown(4,3,3,2);
 
 
 
-
-
-
-//        board.addQueen(4,0,"White");
-
-//        int number = input.nextInt();
-//        int number1 = input.nextInt();
-//        int number2 = input.nextInt();
-//        int number3 = input.nextInt();
-//
-//
-//        board.movePiece(number,number1,number2,number3);
-        board.get(6,1).possibleMoves(board.getChessBoard(),6,1);
 
 
 
@@ -158,25 +146,24 @@ public class ChessBoard {
 
     }
 
+    public boolean pieceTakeDown(int currentPositionX, int currentPositionY, int opponentPiecePositionX, int opponentPiecePositionY){
 
-//    public boolean movePiece(int currentPositionX, int currentPositionY, int newPositionX, int newPositionY){
-//
-//        this.chessBoard[currentPositionX][currentPositionY].possibleMoves(this.getChessBoard(),currentPositionX,currentPositionY);
-//        if(this.chessBoard[currentPositionX][currentPositionY] != null && this.chessBoard[newPositionX][newPositionY] == null){
-//            Piece pieceToMove = get(currentPositionX,currentPositionY);
-//            this.chessBoard[newPositionX][newPositionY] = pieceToMove;
-//            removePiece(currentPositionX,currentPositionY);
-//            System.out.println("New position is " + newPositionX + " " + newPositionY);
-//            System.out.println(this.chessBoard[newPositionX][newPositionY].getType());
-//
-//            return true;
-//        }else {
-//            System.out.println("Move wasn't able");
-//            return false;
-//        }
-//
-//
-//    }
+        if(this.chessBoard[currentPositionX][currentPositionY].possibleTakeDowns.contains(new MovePoint(opponentPiecePositionX,opponentPiecePositionY))){
+            Piece beatingPiece = get(currentPositionX,currentPositionY);
+            this.chessBoard[opponentPiecePositionX][opponentPiecePositionY] = beatingPiece;
+            removePiece(currentPositionX,currentPositionY);
+
+            System.out.println("You have beat opponent piece at position " + opponentPiecePositionX + " " +opponentPiecePositionY);
+            return true;
+        }else {
+            System.out.println("Beating wasn't able");
+            return false;
+        }
+
+    }
+
+
+
 
 
 }

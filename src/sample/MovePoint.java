@@ -26,8 +26,8 @@ public class MovePoint {
 
     @Override
     public boolean equals(Object obj) {
-        if(obj == null){
-
+        if(obj == null)
+        {
             return false;
         }
         if(obj instanceof MovePoint){
@@ -49,7 +49,7 @@ public class MovePoint {
             return "No moves available";
         }
         else
-            return "You can move to " + getPositionX() + " " + getPositionY();
+            return "" + getPositionX() + " " + getPositionY();
     }
 }
 
